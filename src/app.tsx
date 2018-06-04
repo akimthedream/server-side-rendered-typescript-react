@@ -1,6 +1,8 @@
 import * as React from 'react';
 
-interface IAppProps {}
+interface IAppProps {
+  counter: number;
+}
 
 interface IAppState {
   counter: number;
@@ -10,7 +12,7 @@ class App extends React.PureComponent<IAppProps, IAppState> {
   constructor(props: IAppProps) {
     super(props);
     this.state = {
-      counter: 0
+      counter: props.counter
     }
   }
 
@@ -29,6 +31,4 @@ class App extends React.PureComponent<IAppProps, IAppState> {
   }
 }
 
-export default App;
-
-export const component = <App/>;
+export default (initialState: IAppProps) => <App counter={initialState.counter}/>;

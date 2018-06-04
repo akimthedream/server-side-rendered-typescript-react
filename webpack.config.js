@@ -2,6 +2,7 @@ const path = require('path');
 
 const clientConfig = {
   mode: 'production',
+  target: 'web',
   entry: './src/client.tsx',
   module: {
     rules: [
@@ -17,7 +18,7 @@ const clientConfig = {
   },
   output: {
     filename: 'bundle.client.js',
-    path: path.resolve(__dirname, 'assets')
+    path: path.resolve(__dirname, 'dist')
   }
 };
 
@@ -40,9 +41,8 @@ const serverConfig = {
   output: {
     filename: 'bundle.server.js',
     libraryTarget: 'commonjs2',
-    path: path.resolve(__dirname, 'assets')
+    path: path.resolve(__dirname, 'dist')
   }
 };
-
 
 module.exports = [serverConfig, clientConfig];

@@ -1,5 +1,7 @@
 import * as React from 'react';
 import {render} from 'react-dom';
-import {component} from './app';
+import app from './app';
 
-render(component, document.getElementById('mount'));
+const initialState = (window as any).__PRELOADED_STATE__;
+
+render(app(initialState), document.getElementById('mount'));

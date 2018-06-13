@@ -31,4 +31,4 @@ class App extends React.PureComponent<IAppProps, IAppState> {
   }
 }
 
-export default (initialState: IAppProps) => <App counter={initialState.counter}/>;
+export default (initialState: IAppProps) => <App {...initialState}/>;

@@ -1,25 +1,26 @@
 {
   "name": "ssr",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple server side rendered react app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "start": "node server"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Achim Krüger",
+  "license": "MIT",
   "dependencies": {
-    "@types/react": "^16.3.16",
-    "@types/react-dom": "^16.0.5",
     "express": "^4.16.3",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0"
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
   },
   "devDependencies": {
-    "ts-loader": "^4.3.1",
-    "typescript": "^2.9.1",
-    "webpack": "^4.10.2",
-    "webpack-cli": "^3.0.1"
+    "@types/react": "^16.3.17",
+    "@types/react-dom": "^16.0.6",
+    "ts-loader": "^4.4.1",
+    "typescript": "^2.9.2",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.6"
   }
 }
